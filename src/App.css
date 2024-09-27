@@ -1,0 +1,74 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  font-weight: 400;
+}
+
+
+body{
+scroll-behavior: smooth;
+background-color: #eff3f6;
+/* background: white; */
+color: #2d312a;
+overflow-x: hidden;
+}
+
+body.dark{
+  background-color: black;
+color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(79, 79, 79); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.language-jsx span{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: auto;
+  
+}
+
+pre{
+  
+  width: fit-content;
+}
+.animatedPara .language-jsx> :nth-child(5),.animatedPara .language-jsx>:nth-child(4){
+  /* width: 100%;
+  display: inline-block; */
+  background: rgba(16, 198, 235, 0.259);
+  font-weight: 900;
+  font-style: italic;
+  
+  
+}
+.sectionthree .language-jsx> :nth-child(2){
+  /* width: 100%;
+  display: inline-block; */
+  background: rgba(16, 198, 235, 0.259);
+  font-weight: 900;
+  font-style: italic;
+  
+  
+}
+.scrollShow{
+  perspective: 5000px;
+  
+}
+
