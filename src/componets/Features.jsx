@@ -29,7 +29,7 @@ const Features = () => {
               <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full h-full" src="https://img.icons8.com/?size=100&id=626&format=png&color=e600ff" alt="" /> </span>
               <h3 className="text-sm md:text-lg font-medium ">Beautifully Designed</h3>
             </div>
-            <p className="text-xs md:text-sm mt-2">Pratap UI components are beautifully designed, blending modern aesthetics with functionality to enhance user experience, ensuring seamless integration and performance in any application.</p>
+            <p className="text-xs md:text-sm mt-2">Pratap UI components are beautifully designed, merging modern aesthetics with functionality for an enhanced user experience and seamless performance in any application.</p>
           </div>
                   
           <div className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full">
@@ -37,14 +37,16 @@ const Features = () => {
               <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10 "> <img className="w-full h-full" src="https://img.icons8.com/?size=100&id=347&format=png&color=e600ff" alt="" /> </span>
               <h3 className="text-sm md:text-lg font-medium ">Animate on View</h3>
             </div>
-            <p className="text-xs md:text-sm mt-2">Pratap UI components support "animate on view" functionality, enhancing user engagement with smooth animations that trigger as elements become visible, creating a dynamic, immersive experience.</p>
+            <p className="text-xs md:text-sm mt-2">
+            Pratap UI components feature "animate on view" functionality, adding smooth animations that engage users as elements appear, creating a dynamic, immersive experience.</p>
           </div>
           <div className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full">
             <div className="flex items-center gap-2">
-              <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full h-full" src="https://img.icons8.com/?size=100&id=347&format=png&color=e600ff" alt="" /> </span>
+              <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full h-full" src="https://img.icons8.com/?size=100&id=u4BTDlUOw95p&format=png&color=e600ff" alt="" /> </span>
               <h3 className="text-sm md:text-lg font-medium ">No runtime styles</h3>
             </div>
-            <p className="text-xs md:text-sm mt-2">Pratap UI is based on Tailwind CSS, it means that there are no runtime styles, and no unnecessary classes in your bundle.</p>
+            <p className="text-xs md:text-sm mt-2">
+            Pratap UI harnesses the power of Tailwind CSS, delivering efficient design with zero runtime styles. Say goodbye to bloat and hello to clean, purposeful styling!</p>
           </div>
           <div className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full">
             <div className="flex items-center gap-2">
