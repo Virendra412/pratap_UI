@@ -1,15 +1,17 @@
 'use client';
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { motion, Variants } from 'framer-motion';
 
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { getViewContext } from '../testing/ViewContext';
 
 type PresetType = | 'fade' | 'slide' | 'scale' | 'blur' | 'blur-slide' | 'zoom' | 'flip' | 'bounce' | 'rotate' | 'swing';
 
 type AnimatedGroupProps = {
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
   variants?: {
     container?: Variants;
     item?: Variants;
@@ -132,7 +134,7 @@ function AnimatedGroup({
   children,
   className,
   variants,
-  effect,
+  effect,...props
 }: AnimatedGroupProps) {
   const selectedVariants = effect
     ? presetVariants[effect]
@@ -140,12 +142,14 @@ function AnimatedGroup({
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
 
+  const isInView= getViewContext()??true
+
   return (
     <motion.div
       initial='hidden'
-      animate='visible'
+      animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className={twMerge(className)}
+      className={twMerge(className)} {...props}
     >
       {React.Children.map(children, (child, index) => (
         <motion.div key={index} variants={itemVariants}>

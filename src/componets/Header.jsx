@@ -17,7 +17,7 @@ const Header = () => {
       className="w-screen min-h-[80vh] flex items-center  justify-center  shrink-0 grow-0"
       style={{ maskImage: "var(--mask)" }}
     >
-      <div>
+      <div >
         <h1 className="text-3xl sm:text-5xl md:text-6xl text-center mb-1 font-bold">
           Make your website <br />
           look&nbsp;
@@ -35,8 +35,8 @@ const Header = () => {
         </h3>
 
         <div className="buttons flex justify-center gap-5 md:gap-10 mt-6 items-center">
-          <button className="py-2 px-5 text-xs sm:text-lg bg-gray-500/45 rounded-md font-medium md:py-1"> Browse Components </button>
-          <button className="py-2 bg-black text-xs sm:text-lg  px-5 text-white dark:bg-white dark:text-black  rounded-md font-medium md:py-1"> Star on Github </button>
+          <button className="py-2 px-5 text-xs sm:text-base bg-gray-500/45 rounded-md font-medium md:py-1"> Browse Components </button>
+          <button className="py-2 bg-black text-xs sm:text-base  px-5 text-white dark:bg-white dark:text-black  rounded-md font-medium md:py-1"> Star on Github </button>
         </div>
       </div>
     </motion.div>

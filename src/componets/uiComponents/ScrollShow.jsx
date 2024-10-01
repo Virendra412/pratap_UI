@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { maskGenerator } from '../../../test'
-import { cubicBezier, useScroll, useSpring, useTransform ,motion} from 'framer-motion';
+import {fullMaskRight,fullMaskBottom} from '../../../test'
+import { cubicBezier, useScroll,useTransform ,motion} from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 import Code from './Code';
+
 
 
 let codeString=`<TopLayer className='bg-[#E7EEF2] text-[#454647]'>
@@ -20,6 +21,7 @@ let codeString=`<TopLayer className='bg-[#E7EEF2] text-[#454647]'>
 <BottomLayer></BottomLayer>`
 
 const ScrollShow = () => {
+   
     const [viewWidth,setViewWidth]= useState(1000)
     const divRef = useRef(null);
 
@@ -34,22 +36,31 @@ const ScrollShow = () => {
         if (divRef.current) {
           setViewWidth(divRef.current.getBoundingClientRect().width);
       }
-    })
+    },[])
 
-    const rotX=useTransform(scrollYProgress,[0,0.33],[95,0])
-    const rotY=useTransform(scrollYProgress,[0,0.33],[90,0])
-    const sca=useTransform(scrollYProgress,[0,0.33],[0.3,1])
+    const rotX=useTransform(scrollYProgress,[0,0.3],[95,0])
+    const rotY=useTransform(scrollYProgress,[0,0.3],[90,0])
+    const sca= useTransform(scrollYProgress,[0,0.3],[0.1,1])
   
-    const progress1 = useTransform(scrollYProgress, [0.33, 0.66], [0, 45]);
+    const progress1 = useTransform(scrollYProgress, [0.33, 0.66], [0, 45])
     const scale2 = useTransform(scrollYProgress, [0.33, 0.6], [1.7, 1],{ease: cubicBezier(0.17, 0.67, 0.83, 0.67)});
     scale2.on("change", (lat) => {
         if (divRef.current) { divRef.current.style.setProperty("--scale2", lat); }
     });
+
     
-    progress1.on("change", (lat) => { if (divRef.current) { divRef.current.style.setProperty("--mask1", maskGenerator(lat,viewWidth>500?'right':'bottom')); } });
     
-    const progress2 = useTransform(scrollYProgress, [0.66, 1], [0, 45]);
-    const scale3 = useTransform(scrollYProgress, [0.66, 0.95], [1.7, 1],{ease: cubicBezier(0.17, 0.67, 0.83, 0.67)});
+    progress1.on("change", (lat) => {
+        if (divRef.current) {
+            
+            divRef.current.querySelector('.topLayer').style.setProperty("--mask1", viewWidth > 500 ?fullMaskRight[Math.round(lat)] : fullMaskBottom[Math.round(lat)] )
+            // divRef.current.querySelector('.topLayer').style.setProperty("--mask1",fullMaskBottom[lat])
+            // .style.setProperty("--mask1", maskGenerator(lat, viewWidth > 500 ? 'right' : 'bottom'))
+        }
+    });
+    
+    const progress2 = useTransform(scrollYProgress, [0.69, 1], [0, 45]);
+    const scale3 = useTransform(scrollYProgress, [0.69, 0.95], [1.7, 1],{ease: cubicBezier(0.17, 0.67, 0.83, 0.67)});
     scale3.on("change", (lat) => {
         if (divRef.current) {
             divRef.current.style.setProperty("--scale3", lat);
@@ -57,8 +68,11 @@ const ScrollShow = () => {
     });
     
     progress2.on("change", (lat) => {
-        if (divRef.current) { divRef.current.style.setProperty("--mask2", maskGenerator(lat,viewWidth>700?'right':'bottom')); }
+        if (divRef.current) { 
+            divRef.current.querySelector('.middleLayer').style.setProperty("--mask2", viewWidth > 500 ? fullMaskRight[Math.round(lat)] : fullMaskBottom[Math.round(lat)])}
     });
+
+    
 
   return (
       <div ref={divRef} className='scrollShow relative w-full h-[500vh]'>
@@ -109,9 +123,9 @@ const ScrollShow = () => {
 export default ScrollShow
 
 
-export function TopLayer({children,className,...props}) {
+export function TopLayer({ children, className, style,...props}) {
     return (
-        <div className={twMerge(`top-0 left-0 z-20 w-full h-[100vh] absolute bg-slate-800`,className)} {...props} style={{maskImage:'var(--mask1)',pointerEvents:'none'}}>
+        <div className={twMerge(`topLayer top-0 left-0 z-20 w-full h-[100vh] absolute bg-slate-800`,className)} {...props} style={{maskImage:'var(--mask1)',scale:'var(--scale1)',pointerEvents:'none',...style}} >
             {children}
         </div>
     )
@@ -120,7 +134,7 @@ export function TopLayer({children,className,...props}) {
 export function MiddleLayer({ children, className,style,...props }) {
     
     return (
-        <div className={twMerge(`top-0 z-10 left-0 w-full h-[100vh] absolute `,className)} {...props} style={{maskImage:'var(--mask2)',scale:'var(--scale2)',pointerEvents:'none',...style}}>
+        <div className={twMerge(`middleLayer top-0 z-10 left-0 w-full h-[100vh] absolute `,className)} {...props} style={{maskImage:'var(--mask2)',scale:'var(--scale2)',pointerEvents:'none',...style}}>
             {children}
         </div>
     )

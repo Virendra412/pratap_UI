@@ -8,7 +8,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScrolling>
     <App />
-  </SmoothScrolling>
+    </SmoothScrolling>
+   
+  
     
   </StrictMode>,
 )

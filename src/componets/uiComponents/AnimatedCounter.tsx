@@ -1,5 +1,6 @@
-import React, { useEffect, useState ,ComponentProps, ComponentPropsWithoutRef, useRef} from 'react'
-import { useSpring, motion, useMotionValue, useInView, MotionProps, ForwardRefComponent, HTMLMotionProps } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import { useSpring, motion} from 'framer-motion'
+import { getViewContext } from '../testing/ViewContext'
 
 
 
@@ -14,13 +15,12 @@ interface Prps {
     suffix: string
     className: string,
     onClick?: React.MouseEventHandler
-    inview?: 1 | 0
+    
 }
 
 
-const AnimatedCounter = ({ className, from = 0, to = 100, toFixedDecimal = 0, prefix, suffix, inview=1 ,...props}: Prps) => {
-    const viewRef = useRef(null)
-    const isInView= useInView(viewRef)
+const AnimatedCounter = ({ className, from = 0, to = 100, toFixedDecimal = 0, prefix, suffix ,...props}: Prps) => {
+    const isInView= getViewContext()??true
     const [counter, setCounter] = useState(from)
     const counterSpring = useSpring(0, { bounce: 0, duration: 2000})
     
@@ -29,16 +29,16 @@ const AnimatedCounter = ({ className, from = 0, to = 100, toFixedDecimal = 0, pr
         setCounter(val)
     })
     useEffect(() => {
-        if (inview) {
+        if (isInView) {
             counterSpring.set(to) 
         } else {
             counterSpring.set(from) 
         }
         
-    },[inview])
+    },[isInView])
 
   return (
-      <motion.div ref={viewRef} {...props} className={`text-4xl  p-5 w-fit flex justify-start  ${className?className:""}`} {...props}>{prefix}{counter.toFixed(toFixedDecimal)}{ suffix}</motion.div>
+      <motion.div {...props} className={`text-4xl  p-5 w-fit flex justify-start  ${className?className:""}`} {...props}>{prefix}{counter.toFixed(toFixedDecimal)}{ suffix}</motion.div>
   )
 }
 

@@ -1,15 +1,23 @@
-import { useState } from 'react'
+
 import './App.css'
 import Navbar from './componets/Navbar'
 import Header from './componets/Header'
-import AnimatedCounter from './componets/uiComponents/AnimatedCounter'
+import bluf2 from './assets/Operations_puff.webp'
+import bluf from './assets/Conversion_puff.webp'
 import SectionTwo from './componets/SectionTwo.jsx'
 import ScrollShow from './componets/uiComponents/ScrollShow.jsx'
 import SectionThree from './componets/SectionThree.jsx'
 import SectionOne from './componets/SectionOne.jsx'
 import SectionFour from './componets/SectionFour.jsx'
-import SmoothScroll from './componets/UtilsComponent/SmothScroll.jsx'
-import SmothScroll from './componets/UtilsComponent/SmothScroll.jsx'
+import Footer from './componets/Footer.jsx'
+import { AnimatedPara } from './componets/uiComponents/AnimatedPara.jsx'
+
+import AnimatedCounter from './componets/uiComponents/AnimatedCounter.tsx'
+import Features from './componets/Features.jsx'
+
+
+
+
 
 function App() {
   
@@ -18,17 +26,22 @@ function App() {
 
   return (
    
-    <SmothScroll>
-        <div>
+   
+        <>
       <Navbar></Navbar>
       <Header></Header>
+      <div className='uiComp' style={{background:`url(${bluf2}),url(${bluf})`}}>
       <SectionThree/>
       <SectionTwo></SectionTwo>
       <SectionOne> </SectionOne>
+      </div>
       <SectionFour></SectionFour>
       <ScrollShow></ScrollShow>
-      </div>
-      </SmothScroll>
+      <Features></Features>
+      <Footer></Footer>
+      
+      </>
+      
  
     
   

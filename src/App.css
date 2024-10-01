@@ -2,14 +2,15 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
 }
 
 
 body{
 scroll-behavior: smooth;
-background-color: #eff3f6;
+background-color: #f9fbfd;
+
 /* background: white; */
 color: #2d312a;
 overflow-x: hidden;
@@ -69,6 +70,12 @@ pre{
 }
 .scrollShow{
   perspective: 5000px;
+  color: #e600ff;
   
 }
 
+.uiComp{
+  background-repeat: no-repeat !important;
+  background-position: top left, center right !important;
+  background-size: 50% auto, 50% auto !important;
+}

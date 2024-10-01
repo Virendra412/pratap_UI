@@ -1,44 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from "react";
 // import './three.css'
-import { motion, useInView, easeInOut } from 'framer-motion'
-import { twMerge } from 'tailwind-merge'
+import { motion} from "framer-motion";
+import { twMerge } from "tailwind-merge";
+import { getViewContext } from "../testing/ViewContext";
 
-
-
-
-
-
-export const AnimatedPara = ({children,className,color="white" }) => {
-   
-  const text = useRef(null)
-
-  const isInView = useInView(text,{once:false})
-  
- 
-  
+export const AnimatedPara = ({ children, className,duration=3 }) => {
+  const isInView = getViewContext() ?? true;
   const textAnimation = {
-    hiden: { backgroundSize: '0% 100%' },
+    hiden: { backgroundSize: "0% 100%" },
     show: {
-      backgroundSize: '100% 100%',
-     }
-  }
+      backgroundSize: "100% 100%",
+    },
+  };
 
- 
-  
-  
   return (
-      
-     
-          <p className='max-w-[95%]  m-auto'><motion.span className={twMerge(`text-neutral-600/25 inline text-3xl max-md:text-2xl max-sm:text-xl`,className)} ref={text} variants={textAnimation} initial='hidden' animate={isInView ? 'show' : 'hidden'} transition={{ duration: 4, easings:'easeIn' }}
-          style={{background: `linear-gradient(${color},${color})`,
-            backgroundClip: 'text',
-            backgroundSize: '0% 100%',
-            backgroundRepeat: 'no-repeat'}}
-          >
-      {children}
+    <p>
+      <motion.span
+        className={twMerge( `text-neutral-600/25 bg-gradient-to-r from-black to-black dark:from-white dark:to-white inline text-3xl max-md:text-2xl max-sm:text-xl`, className )}
+        variants={textAnimation}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+        transition={{ duration: duration, easings: "easeIn" }}
+        style={{
+          backgroundClip: "text",
+          backgroundSize: "0% 100%",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {children}
       </motion.span>
-        
-      </p>
-     
-  )
-}
+    </p>
+  );
+};
