@@ -22,8 +22,7 @@ interface Prps {
 const AnimatedCounter = ({ className, from = 0, to = 100, toFixedDecimal = 0, prefix, suffix ,...props}: Prps) => {
     const isInView= getViewContext()??true
     const [counter, setCounter] = useState(from)
-    const counterSpring = useSpring(0, { bounce: 0, duration: 2000})
-    
+    const counterSpring = useSpring(0, { damping: 100, stiffness: 100})
     
     counterSpring.on('change', val => {
         setCounter(val)

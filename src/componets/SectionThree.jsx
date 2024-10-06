@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { AnimatedGroup } from './uiComponents/GroupAnimation'
-import { motion, useInView, useScroll } from 'framer-motion'
+import {AnimatedGroup} from 'uday-ui'
+import { motion, useInView} from 'framer-motion'
 import Code from './uiComponents/Code'
-import bluf from '../assets/Operations_puff.webp'
 const variant=[ 'fade' , 'slide' , 'scale' , 'blur' , 'blur-slide' , 'zoom' , 'flip' , 'bounce' , 'rotate' ,'swing']
 
 const SectionThree = () => {
@@ -10,7 +9,8 @@ const SectionThree = () => {
     const [play, setPlay] = useState(false)
     const animateRef = useRef(null)
     const isSectionInView= useInView(animateRef,{amount:0.2})
-    let codeString = `<AnimatedGroup key={play} className='flex gap-5 justify-center'
+    let codeString = `import {AnimatedGroup} from 'pratap-ui'
+<AnimatedGroup key={play} className='flex gap-5 justify-center'
 effect='${variant[activeVariant]}'>
 
 <div className=' w-32 h-40 bg-slate-400 rounded'></div>

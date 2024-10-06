@@ -1,6 +1,6 @@
 import React from "react";
-import { AnimatedGroup } from "./uiComponents/GroupAnimation";
-import AnimateOnView from "./testing/ViewContext";
+import { AnimatedGroup,AnimateOnView } from "uday-ui";
+
 const featuresData = [
   {
     title: 'Customizable Component',
@@ -40,12 +40,12 @@ const Features = () => {
         Unleash Creativity with Our Comprehensive React UI Library!
       </p>
 
-      <AnimateOnView className='flex justify-center'>
+      <AnimateOnView className='flex justify-center' animateOnce={false}>
         <AnimatedGroup effect="swing" className="grid gap-5 grid-cols-2 md:grid-cols-3 grid-rows-2 mt-10 max-w-[1050px] ">
           {
-            featuresData.map(item => {
+            featuresData.map((item,index) => {
               return (
-                <div className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full shadow-md dark:shadow-purple-900/50">
+                <div key={index} className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full shadow-md dark:shadow-purple-900/50">
                 <div className="flex items-center gap-2">
                   <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full" src={ item.imageUrl} alt="" /> </span>
                     <h3 className="text-sm md:text-lg font-medium ">{ item.title}</h3>

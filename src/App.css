@@ -9,7 +9,7 @@
 
 body{
 scroll-behavior: smooth;
-background-color: #f9fbfd;
+background-color: white;
 
 /* background: white; */
 color: #2d312a;
@@ -30,6 +30,7 @@ color: white;
 /* Track */
 ::-webkit-scrollbar-track {
  border-radius: 10px;
+ background-color: #181818;
 }
  
 /* Handle */
@@ -46,9 +47,9 @@ color: white;
   
 }
 
-pre{
-  
-  width: fit-content;
+.mainCode pre{
+  width: fit-content !important;
+ 
 }
 .animatedPara .language-jsx> :nth-child(5),.animatedPara .language-jsx>:nth-child(4){
   /* width: 100%;
@@ -59,7 +60,7 @@ pre{
   
   
 }
-.sectionthree .language-jsx> :nth-child(2){
+.sectionthree .language-jsx> :nth-child(3){
   /* width: 100%;
   display: inline-block; */
   background: rgba(16, 198, 235, 0.259);

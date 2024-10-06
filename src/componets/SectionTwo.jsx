@@ -2,8 +2,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Code from './uiComponents/Code'
-import bluf from '../assets/Conversion_puff.webp'
-import AnimatedPara2 from './uiComponents/AnimatedPara2'
+import {AnimatedText} from 'uday-ui'
+
 const text="I create stunning and functional designs that captivate users and enhance their online experience. By blending creativity with technical skill, I craft visually appealing and responsive websites tailored to meet each client’s unique needs."
 const variants=["wave" , "scaleOut" , "fadeIn"]
 
@@ -15,7 +15,7 @@ const SectionTwo = () => {
     const animateRef = useRef(null)
     const isSectionInView= useInView(animateRef,{amount:0.2})
     const dynamicClass=['text-blue-500', 'italic font-normal','uppercase']
-    let codeString = `
+    let codeString = `import {AnimatedText} from 'pratap-ui'
     const text="I create and functional designs that captivate users and enhance their online experience. By blending creativity with technical skill, I craft visually appealing and responsive websites tailored to meet each client’s unique needs, ensuring a seamless and engaging user experience."
     <AnimatedPara2 
     variant='${variants[activeVariant]}' 
@@ -55,7 +55,8 @@ const SectionTwo = () => {
                   Customization</motion.div>  <br />
       </h2>
       <div className='flex mt-10  items-center flex-col lg:flex-row relative z-10 justify-between '>
-        <AnimatedPara2 key={play} variant={variants[activeVariant]} className={`text-1xl sm:text-xl font-normal md:text-2xl ${dynamicClass[activeVariant]}` } wrapperClass='max-w-[600px]' content={text}></AnimatedPara2>
+        <AnimatedText key={play} variant={variants[activeVariant]}  className={`text-1xl sm:text-xl font-normal md:text-2xl ${dynamicClass[activeVariant]}` } wrapperClass='max-w-[600px] gap-[2px]'>{text}</AnimatedText>
+     
         <Code className='min-h-[300px] max-w-[500px] w-full' codeString={codeString}></Code>
       
      </div>

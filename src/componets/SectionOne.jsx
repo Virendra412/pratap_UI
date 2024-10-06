@@ -1,12 +1,11 @@
 import React from 'react'
-import TextReveal from './uiComponents/TextReveal'
 import { motion } from 'framer-motion'
 import Code from './uiComponents/Code'
-import { InfiniteSlider } from './uiComponents/InfiniteSlider'
+import { InfiniteSlider } from 'uday-ui'
 const para=['I create stunning and functional designs that', 'captivate users and enhance their online experience.', 'By blending creativity with technical skill, I craft', 'visually appealing and responsive websites tailored','to meet each client’s needs, ensuring a seamless', 'and engaging user experience.']
 
-const codeString =
-`<InfiniteSlider className='bg-white ' gap={50} reverse={true} >
+const codeString =`import { InfiniteSlider } from 'pratap-ui'
+<InfiniteSlider className='bg-white ' gap={50} reverse={true} >
   <img src='https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000' alt='React' className='h-[40px] md:h-[50px] w-auto my-3' />
   <img src='https://img.icons8.com/?size=100&id=egQrEphjrirz&format=png&color=000000' alt='Redux' className='h-[40px] md:h-[50px] w-auto my-3' />
   <img src='https://img.icons8.com/?size=100&id=108784&format=png&color=000000' alt='Javascript' className='h-[40px] md:h-[50px] w-auto my-3' />
@@ -33,8 +32,8 @@ const SectionOne = () => {
           AMAZING</motion.div>  <br />
         components in few lines
       </h2>
-      <div className='flex mt-10 justify-evenly items-center flex-col lg:flex-row'>
-        {/* <TextReveal className='text-2xl font-medium' container_class='z-40 shrink-0' lines={para}></TextReveal> */}
+      <div className='flex mt-10 justify-evenly gap-5 items-center flex-col lg:flex-row'>
+       
 
         <div className='basis-1/2 max-w-[600px] w-full flex flex-col gap-2 md:gap-5 lg:gap-10 border' style={{ maskImage:'linear-gradient( to right,transparent,black 10%,black 90%,transparent)'}}>
         <InfiniteSlider className='bg-white' gap={50} reverse={true} >
@@ -58,7 +57,7 @@ const SectionOne = () => {
          
         </div>
  
-        <Code className='min-h-[250px] max-w-[500px] w-full' codeString={codeString}></Code>
+       <Code className='min-h-[250px] max-w-[500px] w-full' codeString={codeString}></Code>
       </div>
     </div>
   )

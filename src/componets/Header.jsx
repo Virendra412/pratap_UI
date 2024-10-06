@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import TypeWriter from "./uiComponents/TypeWriter";
+import { TypeWriter} from 'uday-ui'
 import {
   useMotionValueEvent,
   useScroll,
@@ -23,7 +23,7 @@ const Header = () => {
           look&nbsp;
           <TypeWriter
             className="text-3xl sm:text-5xl md:text-6xl text-transparent bg-gradient-to-b from-[#FF705B] to-[#FFB457] bg-clip-text font-bold"
-            cusorClass="sm:w-[3px] md:w-[5px] bg-gradient-to-b from-[#FF705B] to-[#FFB457]"
+            cursorClass="sm:w-[3px] md:w-[5px] bg-gradient-to-b from-[#FF705B] to-[#FFB457]"
             duration={1}
           >
             {["Modern.", "Engaging.", "Amazing."]}

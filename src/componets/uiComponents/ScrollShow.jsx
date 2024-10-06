@@ -43,7 +43,7 @@ const ScrollShow = () => {
     const sca= useTransform(scrollYProgress,[0,0.3],[0.1,1])
   
     const progress1 = useTransform(scrollYProgress, [0.33, 0.66], [0, 45])
-    const scale2 = useTransform(scrollYProgress, [0.33, 0.6], [1.7, 1],{ease: cubicBezier(0.17, 0.67, 0.83, 0.67)});
+    const scale2 = useTransform(scrollYProgress, [0.33, 0.6], [1.7, 1]);
     scale2.on("change", (lat) => {
         if (divRef.current) { divRef.current.style.setProperty("--scale2", lat); }
     });
@@ -60,7 +60,7 @@ const ScrollShow = () => {
     });
     
     const progress2 = useTransform(scrollYProgress, [0.69, 1], [0, 45]);
-    const scale3 = useTransform(scrollYProgress, [0.69, 0.95], [1.7, 1],{ease: cubicBezier(0.17, 0.67, 0.83, 0.67)});
+    const scale3 = useTransform(scrollYProgress, [0.69, 0.95], [1.7, 1]);
     scale3.on("change", (lat) => {
         if (divRef.current) {
             divRef.current.style.setProperty("--scale3", lat);
@@ -125,9 +125,9 @@ export default ScrollShow
 
 export function TopLayer({ children, className, style,...props}) {
     return (
-        <div className={twMerge(`topLayer top-0 left-0 z-20 w-full h-[100vh] absolute bg-slate-800`,className)} {...props} style={{maskImage:'var(--mask1)',scale:'var(--scale1)',pointerEvents:'none',...style}} >
+        <motion.div className={twMerge(`topLayer top-0 left-0 z-20 w-full h-[100vh] absolute bg-slate-800`,className)} {...props} style={{maskImage:'var(--mask1)',scale:'var(--scale1)',pointerEvents:'none',...style}} >
             {children}
-        </div>
+        </motion.div>
     )
 }
 
