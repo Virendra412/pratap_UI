@@ -27,7 +27,7 @@ useEffect(() => {
         setDesc({heading:description.heading,content:description.content,propDetails:description.propDetails})
       
         for (let i = 0; i < componentData[activeIndex].length; i++){
-        const module = await import(`../examples/${componentData[activeIndex].title}/${componentNames[i]}`);
+        const module = await import(`../examples/${componentData[activeIndex].title}/${componentNames[i]}.jsx`);
         comps.push({comp:<module.default/>,codeString:module.codeString})
       }
       setImportedComponent(comps)
