@@ -45,7 +45,7 @@ const Features = () => {
           {
             featuresData.map((item,index) => {
               return (
-                <div key={index} className="border p-2 bg-white dark:bg-neutral-900 rounded-lg border-neutral-100 dark:border-neutral-800 h-full shadow-md dark:shadow-purple-900/50">
+                <div key={index} className="border p-2 bg-white dark:bg-neutral-950 rounded-lg border-neutral-100 dark:border-neutral-900 h-full shadow-md dark:shadow-zinc-700/50">
                 <div className="flex items-center gap-2">
                   <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full" src={ item.imageUrl} alt="" /> </span>
                     <h3 className="text-sm md:text-lg font-medium ">{ item.title}</h3>

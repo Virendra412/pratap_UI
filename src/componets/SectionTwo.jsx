@@ -54,7 +54,7 @@ const SectionTwo = () => {
           >
                   Customization</motion.div>  <br />
       </h2>
-      <div className='flex mt-10  items-center flex-col lg:flex-row relative z-10 justify-between '>
+      <div className='flex mt-10  items-center flex-col lg:flex-row relative z-10 justify-evenly'>
         <AnimatedText key={play} variant={variants[activeVariant]}  className={`text-1xl sm:text-xl font-normal md:text-2xl ${dynamicClass[activeVariant]}` } wrapperClass='max-w-[600px] gap-[2px]'>{text}</AnimatedText>
      
         <Code className='min-h-[300px] max-w-[500px] w-full' codeString={codeString}></Code>

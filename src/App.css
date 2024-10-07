@@ -10,6 +10,7 @@
 body{
 scroll-behavior: smooth;
 background-color: white;
+-webkit-font-smoothing: antialiased;
 
 /* background: white; */
 color: #2d312a;
@@ -30,12 +31,13 @@ color: white;
 /* Track */
 ::-webkit-scrollbar-track {
  border-radius: 10px;
- background-color: #181818;
+ 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(79, 79, 79); 
+  
   border-radius: 10px;
 }
 
@@ -71,12 +73,12 @@ color: white;
 }
 .scrollShow{
   perspective: 5000px;
-  color: #e600ff;
+  color: #000000cd;
   
 }
 
 .uiComp{
   background-repeat: no-repeat !important;
-  background-position: top left, center right !important;
-  background-size: 50% auto, 50% auto !important;
+  background-position: top left, bottom right !important;
+  background-size: 300px, 500px !important;
 }

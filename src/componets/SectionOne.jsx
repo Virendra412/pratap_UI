@@ -35,8 +35,8 @@ const SectionOne = () => {
       <div className='flex mt-10 justify-evenly gap-5 items-center flex-col lg:flex-row'>
        
 
-        <div className='basis-1/2 max-w-[600px] w-full flex flex-col gap-2 md:gap-5 lg:gap-10 border' style={{ maskImage:'linear-gradient( to right,transparent,black 10%,black 90%,transparent)'}}>
-        <InfiniteSlider className='bg-white' gap={50} reverse={true} >
+        <div className='basis-1/2 max-w-[600px] w-full flex flex-col gap-2 md:gap-5 lg:gap-10 ' style={{ maskImage:'linear-gradient( to right,transparent,black 10%,black 90%,transparent)'}}>
+        <InfiniteSlider className='bg-zinc-100' gap={50} reverse={true} >
                 <img src='https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000' alt='React' className='h-[40px] md:h-[50px] w-auto my-3' />
                 <img src='https://img.icons8.com/?size=100&id=egQrEphjrirz&format=png&color=000000' alt='Redux' className='h-[40px] md:h-[50px] w-auto my-3' />
                 <img src='https://img.icons8.com/?size=100&id=108784&format=png&color=000000' alt='Javascript' className='h-[40px] md:h-[50px] w-auto my-3' />
@@ -45,7 +45,7 @@ const SectionOne = () => {
                 <img src='https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000' alt='mongodb' className='h-[40px] md:h-[50px] w-auto my-3' />
                 <img src='https://img.icons8.com/?size=100&id=cHBUT9SmrD2V&format=png&color=000000' alt='typescript' className='h-[40px] md:h-[50px] w-auto my-3' />
             </InfiniteSlider>
-        <InfiniteSlider className='bg-white' gap={50} reverse={false} >
+        <InfiniteSlider className='bg-zinc-100' gap={50} reverse={false} >
                 <img src='https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000' alt='React' className='h-[40px] md:h-[50px] w-auto my-3' />
                 <img src='https://img.icons8.com/?size=100&id=egQrEphjrirz&format=png&color=000000' alt='Redux' className='h-[40px] md:h-[50px] w-auto my-3' />
                 <img src='https://img.icons8.com/?size=100&id=108784&format=png&color=000000' alt='Javascript' className='h-[40px] md:h-[50px] w-auto my-3' />

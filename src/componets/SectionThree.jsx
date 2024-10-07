@@ -45,7 +45,7 @@ effect='${variant[activeVariant]}'>
           <h2 className='text-3xl sm:text-5xl md:text-6xl font-[600] z-10 relative'>
         Create&nbsp;
         <motion.div className='leading-[1.25] italic font-[700] bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent inline-block overflow-visible'
-         animate={{y:[-10,0,10],transition:{ repeat: Infinity, repeatType: "mirror", duration:1.2,ease:'linear'}}}  >
+         animate={{y:[-5,0,5],transition:{ repeat: Infinity, repeatType: "reverse", duration:1.2,ease:'linear'}}}  >
           amazing</motion.div>  <br />
         components in few lines
       </h2>

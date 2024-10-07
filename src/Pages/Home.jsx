@@ -13,7 +13,9 @@ const Home = () => {
   return (
     <>
       <Header></Header>
-      <div className="uiComp" style={{ background: `url(${bluf2}),url(${bluf})` }} >
+      <div className="uiComp"
+        // style={{ background: `url(${bluf2}),url(${bluf})` }}
+      >
         <SectionThree />
         <SectionTwo />
         <SectionOne />
