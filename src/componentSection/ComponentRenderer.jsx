@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PreviewBlock from './PreviewBlock.jsx';
 import CompnentSlider from './CompnentSlider.jsx';
 import PropDetails from './PropDetails.jsx';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 const componentNames = ['Example1', 'Example2', 'Example3', 'Example4', 'Example5', 'Example6']; // List all component names
 const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0}]
 const codeString=`const Example1 = () => {
@@ -42,13 +42,13 @@ useEffect(() => {
   }
     
   return (<div>
-    <div className={`border-b border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`} onClick={()=>setIsOpen(true)}>
+    <div className={`border-b border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`} onClick={()=>setIsOpen(prev=>!prev)}>
       <div className='menu px-2 items-center h-[50px] flex gap-3  '>
-      <Menu ></Menu>
+        {!isOpen?<Menu />:<X />}
       <span>{ componentData[activeIndex].title}</span>
       </div>
     </div>
-    <div className=' flex justify-center  pb-[30px] m-auto px-2 relative gap-5 '>
+    <div className=' flex justify-center  pb-[30px] m-auto px-2 relative gap-5 ' onClick={()=>setIsOpen(false)}>
       <CompnentSlider isOpen={isOpen} setIsOpen={setIsOpen} changeCategory={changeCategory} activeIndex={activeIndex}></CompnentSlider>
       
       <div className={`overflow-auto max-w-[1000px] transition-all mt-3 sm:blur-0 ${isOpen?'blur-md':''}`} >

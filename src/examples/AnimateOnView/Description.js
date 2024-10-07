@@ -24,7 +24,7 @@ const propDetails = [
       prop: 'amount',
       type: 'Number',
       default: '0.2',
-      description: 'this is the amount of content animate whwn comes in view',
+      description: 'The amount of an element that needs to enter the viewport for animation to start',
     },
     {
       prop: 'className',
