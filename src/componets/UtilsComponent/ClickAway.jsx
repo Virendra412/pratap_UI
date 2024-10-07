@@ -8,7 +8,8 @@ const useClickAwayListner = (onClickAway) => {
         console.log("clickAway Rendered");
         const handleClickAway = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
-              onClickAway(false)
+                //   onClickAway(false)
+                onClickAway()
             }
         };
         

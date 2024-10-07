@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import PreviewBlock from './PreviewBlock.jsx';
 import CompnentSlider from './CompnentSlider.jsx';
 import PropDetails from './PropDetails.jsx';
-import Code from '../componets/uiComponents/Code.jsx';
 import { Menu } from 'lucide-react';
 const componentNames = ['Example1', 'Example2', 'Example3', 'Example4', 'Example5', 'Example6']; // List all component names
 const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },]
@@ -24,7 +23,7 @@ const ComponentRenderer = () => {
 useEffect(() => {
   const importComponent = async () => {
         const comps=[]
-        const description = await import(/* @vite-ignore */`../examples/${componentData[activeIndex].title}/Description.js`)
+        const description = await import(`../examples/${componentData[activeIndex].title}/Description.js`)
         setDesc({heading:description.heading,content:description.content,propDetails:description.propDetails})
       
         for (let i = 0; i < componentData[activeIndex].length; i++){
@@ -43,7 +42,7 @@ useEffect(() => {
   }
     
   return (<div>
-    <div className={`border-b border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`}onClick={()=>setIsOpen(prev=>!prev)}>
+    <div className={`border-b border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`} onClick={()=>setIsOpen(prev=>!prev)}>
       <div className='menu px-2 items-center h-[50px] flex gap-3  '>
       <Menu ></Menu>
       <span>{ componentData[activeIndex].title}</span>
