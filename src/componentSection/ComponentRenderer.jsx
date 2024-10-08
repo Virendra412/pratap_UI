@@ -3,8 +3,9 @@ import PreviewBlock from './PreviewBlock.jsx';
 import CompnentSlider from './CompnentSlider.jsx';
 import PropDetails from './PropDetails.jsx';
 import { Menu, X } from 'lucide-react';
+import Hover from '../componets/uiComponents/Hover.jsx';
 const componentNames = ['Example1', 'Example2', 'Example3', 'Example4', 'Example5', 'Example6']; // List all component names
-const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0}]
+const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0},{title:'Animated Counter',length:1}]
 const codeString=`const Example1 = () => {
   return (
       <div className='max-w-[800px] m-auto'>
@@ -53,7 +54,7 @@ useEffect(() => {
       
       <div className={`overflow-auto max-w-[1000px] transition-all mt-3 sm:blur-0 ${isOpen?'blur-md':''}`} >
         {desc&&<h3 className='font-semibold mb-1'>{desc.heading }</h3>}
-        {desc&&<h3 className='mb-5'>{desc.content }</h3>}
+        {desc&&<h3 className='mb-5 ' style={{wordSpacing:'1.5px'}}>{desc.content }</h3>}
         {importedComponent.length > 0 && importedComponent.map((item, ind) => {
           return (<React.Fragment key ={ind}>
             <h3 className='mb-1 mt-5'>Example {ind + 1}</h3>
@@ -64,7 +65,7 @@ useEffect(() => {
       
      
     </div>
-    
+        {/* <Hover></Hover> */}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import useClickAwayListner from "../componets/UtilsComponent/ClickAway";
-const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0}]
+const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0},{title:'Animated Counter',length:1}]
 
 
 

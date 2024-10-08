@@ -137,3 +137,42 @@ export function maskGenerator(progress=0,direction='right') {
 // }
 // console.log(fullMaskBottom);
 
+
+function hoverMask(percentage = 50) {
+
+  let transition = 0.13
+  const dif = 3.33
+  let startGradientNumber = percentage-20;
+  let endGradientNumber = percentage;
+  let startGradient=[]
+  
+  for (let i = 0; i < 6; i++){
+    let black
+    if (transition <= 3.33) {
+      black = `black ${startGradientNumber}% ${ startGradientNumber + dif - transition }%,transparent ${startGradientNumber + dif - transition}% ${ startGradientNumber + dif }%`;
+    }
+    else {
+      black = `black ${startGradientNumber}% ${startGradientNumber}%,transparent ${startGradientNumber}% ${ startGradientNumber + dif }%`;
+    }
+    startGradient.push(black)
+    transition += 0.25
+    startGradientNumber += dif;
+  }
+  
+  for (let i = 0; i < 6; i++){
+    let black
+    if (transition <= 3.33) {
+      black = `black ${endGradientNumber}% ${ endGradientNumber + dif - transition }%,transparent ${endGradientNumber + dif - transition}% ${ endGradientNumber + dif }%`;
+    }
+    else {
+      black = `black ${endGradientNumber}% ${endGradientNumber}%,transparent ${endGradientNumber}% ${ endGradientNumber + dif }%`;
+    }
+    startGradient.push(black)
+    transition -=0.25
+    endGradientNumber += dif;
+  }
+ 
+  return `linear-gradient(45deg,${startGradient.join(",")},black ${percentage+20}%)`;
+  }
+
+export{hoverMask}

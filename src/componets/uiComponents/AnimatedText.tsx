@@ -1,23 +1,23 @@
-import React, { useRef } from 'react'
-const str = 'Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML. '
-import { motion, useInView, easeInOut } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 import { twMerge,ClassNameValue } from 'tailwind-merge'
-import { getViewContext } from '../testing/ViewContext'
+// import { getViewContext } from '../utils/AnimateOnView'
 
 
 
 
 interface Para{
   variant?: "wave" | "scaleOut" | "fadeIn",
-  className:ClassNameValue
-  wrapperClass: ClassNameValue,
-  content:string
+  className?: ClassNameValue
+  wordsClass?:ClassNameValue
+  wrapperClass?: ClassNameValue
+  children:string
 }
 
-const AnimatedPara2 = ({variant="wave",className,wrapperClass,content="hii"}:Para) => {
+const AnimatedText = ({variant="scaleOut",className,wrapperClass,wordsClass,children="default text"}:Para) => {
 
-  const newStr = content.split(' ')
-  const isInView= getViewContext()??true
+  const newStr = children.split(' ')
+  const isInView= true
 
     const containerVariants = {
         hidden: {},
@@ -58,8 +58,8 @@ const AnimatedPara2 = ({variant="wave",className,wrapperClass,content="hii"}:Par
     className={twMerge('flex flex-wrap h-fit',wrapperClass)} >
           {newStr?.map((block,index) => {
               return (
-                  <p key={index} className='overflow-hidden h-fit' >{block.split('')?.map((char,ind) => {
-                    return (<motion.span key={ind+char} variants={ChildVarints[variant]} className={twMerge(`inline-block text-2xl leading-[1.2] font-light relative`,className)}>{char}
+                  <p key={index} className={twMerge(`h-fit overflow-hidden`,wordsClass)} >{block.split('')?.map((char,ind) => {
+                    return (<motion.span key={ind+char} variants={ChildVarints[variant]} className={twMerge(`inline-block `,className)}>{char}
                    </motion.span>)
                   }) }&nbsp;</p>
               )
@@ -68,4 +68,4 @@ const AnimatedPara2 = ({variant="wave",className,wrapperClass,content="hii"}:Par
   )
 }
 
-export default AnimatedPara2
+export {AnimatedText}

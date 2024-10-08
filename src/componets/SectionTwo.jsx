@@ -46,14 +46,13 @@ const SectionTwo = () => {
 
   return (
     <div ref={animateRef} className='animatedPara px-[4%] md:px-[10%] mt-16 relative '>
-      
-      
-      <h2 className='text-3xl sm:text-5xl md:text-6xl font-[600] relative z-10'>
-        Apply your own <br />
-        <motion.div className='italic font-[700] bg-gradient-to-b from-[#1ce1ff] to-[#4992f8] bg-clip-text text-transparent inline-block overflow-visible'
-          >
-                  Customization</motion.div>  <br />
-      </h2>
+      <h2 className='text-3xl sm:text-4xl md:text-5xl font-[600] z-10 relative'>
+      Your&nbsp;
+        <span className='text-3xl sm:text-4xl md:text-5xl font-[900] leading-[1.25] p-1  bg-gradient-to-b from-[#FF626D] to-[#FFBB70] bg-clip-text text-transparent inline-block ' > style </span>  <br />
+          Your Component!
+         </h2>
+         <p className='sm:text-xl text-zinc-500 max-w-[600px] mt-2'>Customize every detail to match your design—seamlessly tweak styles, animations, and functionality.</p>
+          
       <div className='flex mt-10  items-center flex-col lg:flex-row relative z-10 justify-evenly'>
         <AnimatedText key={play} variant={variants[activeVariant]}  className={`text-1xl sm:text-xl font-normal md:text-2xl ${dynamicClass[activeVariant]}` } wrapperClass='max-w-[600px] gap-[2px]'>{text}</AnimatedText>
      

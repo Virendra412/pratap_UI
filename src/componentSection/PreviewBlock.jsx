@@ -20,7 +20,7 @@ const PreviewBlock = ({children,codeString='hii'}) => {
       </div>
       {isPreviewActive &&
         <div className='rounded-md border border-zinc-300 dark:border-zinc-800 relative shrink-0 grow
-      bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]'>
+      bg-[linear-gradient(to_right,#b1b1b112_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b112_1px,transparent_1px)] bg-[size:24px_24px]'>
           <span className='absolute right-2 top-2 w-5 h-fit z-20' onClick={reRender}>
           <RotateCcw  />
           </span>

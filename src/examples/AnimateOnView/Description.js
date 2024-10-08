@@ -1,5 +1,5 @@
-const heading = 'Animated Group'
-const content = "A wrapper that adds animated transitions to a group of child elements. It's perfect for creating staggered animations for lists, grids, or any collection of components."
+const heading = 'AnimatedOnView'
+const content = "The AnimateOnView component is designed to trigger animations when an element enters the viewport, creating a smooth, engaging experience as users scroll through the page. It wraps the content inside a div and automatically detects when that content becomes visible on the screen. Once the element enters the viewport, the component activates the animation, whether it's a fade-in, slide, zoom, or any other effect."
 
 const propDetails = [
     {
@@ -29,7 +29,7 @@ const propDetails = [
     {
       prop: 'className',
       type: `String`,
-      default: '',
+      default: "'w-fit'",
       description: 'Optional! to style the container of content',
     }
 ];

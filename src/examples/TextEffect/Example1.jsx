@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimatedText, AnimateOnView } from "uday-ui";
+
 const codeString = `const Example1 = () => {
   const text = "Pratap UI is a comprehensive React UI library designed to empower developers with a collection of clean, responsive, and accessible components for building modern web applications. From buttons and input fields to complex modal dialogs and data tables, the library provides a wide range of UI elements that are easy to integrate and customize.";
   return (
@@ -18,7 +19,7 @@ const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto p-4">
       <AnimateOnView animateOnce={false}>
-        <AnimatedText wrapperClass="gap-x-[2px]" variant="scaleOut" wordsClass='h-min'  className=' text-sm h-fit sm:text-lg'>
+        <AnimatedText wrapperClass="gap-x-[2px] h-auto" variant="scaleOut"  className=' text-sm sm:text-lg '>
           {text}
         </AnimatedText>
       </AnimateOnView>

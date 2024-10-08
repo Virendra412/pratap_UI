@@ -1,5 +1,5 @@
-const heading = 'Animated Group'
-const content = "A wrapper that adds animated transitions to a group of child elements. It's perfect for creating staggered animations for lists, grids, or any collection of components."
+const heading = 'Animated Text'
+const content = "Easily animate text in React with  'AnimatedText'  component, offering smooth transitions, dynamic effects, and enhanced user engagement, all with minimal effort and full control over animation behavior."
 
 const propDetails = [
     {

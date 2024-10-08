@@ -25,13 +25,14 @@ const codeString =`import { InfiniteSlider } from 'pratap-ui'
 const SectionOne = () => {
   return (
     <div className='px-[4%] md:px-[10%] mt-16'>
-      <h2 className='text-3xl sm:text-5xl md:text-6xl font-[600]'>
-        Create&nbsp;
-        <motion.div className='italic font-[700] bg-gradient-to-b from-[#1cff95] to-[#55f849] bg-clip-text text-transparent inline-block overflow-visible'
-         animate={{y:[-10,0,10],transition:{ repeat: Infinity, repeatType: "mirror", duration:1.2,ease:'linear'}}}  >
-          AMAZING</motion.div>  <br />
-        components in few lines
+      <h2 className='text-3xl sm:text-4xl md:text-5xl font-[600] z-10 relative'>
+        Effortless UI<br />with&nbsp; 
+        <span className='text-3xl sm:text-4xl md:text-5xl font-[700] leading-[1.25] p-1 bg-clip-text text-transparent  bg-gradient-to-b from-[#1cff95] to-[#55f849] inline-block'>Ready-to-Use&nbsp;</span>  
+           Component!
+       
+         
       </h2>
+    <p className='sm:text-xl text-zinc-500 max-w-[700px] mt-2'>Easily integrate stylish, interactive components that make your interface shine with minimal effort.</p>
       <div className='flex mt-10 justify-evenly gap-5 items-center flex-col lg:flex-row'>
        
 
@@ -64,3 +65,5 @@ const SectionOne = () => {
 }
 
 export default SectionOne
+
+// from-[#1cff95] to-[#55f849]

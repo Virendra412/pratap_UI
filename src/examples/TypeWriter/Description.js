@@ -1,5 +1,5 @@
 const heading = 'TypeWriter Text'
-const content = "A wrapper that adds animated transitions to a group of child elements. It's perfect for creating staggered animations for lists, grids, or any collection of components."
+const content = "The text generates on-screen as if it’s being typed in real-time, creating a dynamic and interactive experience. This effect mimics the action of a typewriter, with each character appearing sequentially, simulating typing speed and rhythm."
 
 const propDetails = [
     {
@@ -11,7 +11,7 @@ const propDetails = [
     {
       prop: 'children',
       type: 'Array',
-      default: '',
+      default: "['examle text']",
       description: 'Pass the Array of string to animate',
     },
     {

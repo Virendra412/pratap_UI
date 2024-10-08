@@ -42,13 +42,14 @@ effect='${variant[activeVariant]}'>
  return (
       <div ref={animateRef} className='sectionthree px-[4%] md:px-[10%] mt-16 relative '>
           
-          <h2 className='text-3xl sm:text-5xl md:text-6xl font-[600] z-10 relative'>
-        Create&nbsp;
-        <motion.div className='leading-[1.25] italic font-[700] bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent inline-block overflow-visible'
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-[600] z-10 relative'>
+        Build&nbsp;
+        <motion.div className='text-3xl sm:text-4xl md:text-5xl font-[700] italic leading-[1.25] p-1  bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent inline-block '
          animate={{y:[-5,0,5],transition:{ repeat: Infinity, repeatType: "reverse", duration:1.2,ease:'linear'}}}  >
-          amazing</motion.div>  <br />
-        components in few lines
-      </h2>
+          stunning </motion.div>  <br />
+          Components in No Time!
+         </h2>
+         <p className='sm:text-xl text-zinc-500 max-w-[600px] mt-2'>Create interactive, animated components in just a few lines—powerful features, dynamic functionality, all with minimal code!</p>
           
 
           <div className='flex justify-evenly items-center gap-2 flex-col mt-10 lg:flex-row z-10 relative'>
