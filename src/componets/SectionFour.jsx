@@ -1,6 +1,7 @@
 import React from 'react'
 import {ScrollShow,TopLayer,BottomLayer,MiddleLayer} from 'uday-ui'
 
+
 const SectionFour = () => {
   return (<>
       <div className='px-[4%] md:px-[10%] mt-16'>

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import { TypeWriter} from 'uday-ui'
+import { TypeWriter } from 'uday-ui'
+// import { TypeWriter } from "./uiComponents/TypeWriter";
 import {
   useMotionValueEvent,
   useScroll,
