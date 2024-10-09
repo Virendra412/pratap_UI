@@ -1,5 +1,5 @@
 import React from 'react'
-import {ScrollShow,TopLayer,BottomLayer,MiddleLayer} from 'uday-ui'
+import {ScrollShow,TopLayer,BottomLayer,MiddleLayer} from 'pratap-ui'
 
 
 const SectionFour = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedCounter, AnimateOnView } from "uday-ui";
+import { AnimatedCounter, AnimateOnView } from "pratap-ui";
 const codeString = `const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto ">

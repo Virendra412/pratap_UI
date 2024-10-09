@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Code from './uiComponents/Code'
-import { InfiniteSlider } from 'uday-ui'
+import { InfiniteSlider } from 'pratap-ui'
 const para=['I create stunning and functional designs that', 'captivate users and enhance their online experience.', 'By blending creativity with technical skill, I craft', 'visually appealing and responsive websites tailored','to meet each client’s needs, ensuring a seamless', 'and engaging user experience.']
 
 const codeString =`import { InfiniteSlider } from 'pratap-ui'

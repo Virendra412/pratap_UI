@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Code from './uiComponents/Code'
-import {AnimatedText} from 'uday-ui'
+import {AnimatedText} from 'pratap-ui'
 
 const text="I create stunning and functional designs that captivate users and enhance their online experience. By blending creativity with technical skill, I craft visually appealing and responsive websites tailored to meet each client’s unique needs."
 const variants=["wave" , "scaleOut" , "fadeIn"]

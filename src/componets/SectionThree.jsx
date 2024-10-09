@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import {AnimatedGroup} from 'uday-ui'
+import {AnimatedGroup} from 'pratap-ui'
 import { motion, useInView} from 'framer-motion'
 import Code from './uiComponents/Code'
 const variant=[ 'fade' , 'slide' , 'scale' , 'blur' , 'blur-slide' , 'zoom' , 'flip' , 'bounce' , 'rotate' ,'swing']

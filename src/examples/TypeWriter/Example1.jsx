@@ -1,5 +1,5 @@
 import React from "react";
-import {TypeWriter} from "uday-ui";
+import {TypeWriter} from "pratap-ui";
 const codeString = `const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto p-4">

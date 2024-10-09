@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedText } from "uday-ui";
+import { AnimatedText } from "pratap-ui";
 const codeString = `
 const Example2 = () => {
   return (

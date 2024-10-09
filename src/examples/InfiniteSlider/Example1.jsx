@@ -1,5 +1,5 @@
 import React from "react";
-import { InfiniteSlider } from "uday-ui";
+import { InfiniteSlider } from "pratap-ui";
 const codeString = `const Example1 = () => {
   return (
     <div

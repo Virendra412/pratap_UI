@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedGroup,AnimateOnView } from "uday-ui";
+import { AnimatedGroup,AnimateOnView } from "pratap-ui";
 
 const featuresData = [
   {
