@@ -4,6 +4,7 @@ const useBounds = () => {
 
     const ref = useRef(null)
     const [bounds, setBounds] = useState()
+    console.log(bounds);
     
     useEffect(()=>{
         if (ref.current) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {AnimatedGroup} from 'pratap-ui'
 import { motion, useInView} from 'framer-motion'
-import Code from './uiComponents/Code'
+import Code from './UtilsComponent/Code'
 const variant=[ 'fade' , 'slide' , 'scale' , 'blur' , 'blur-slide' , 'zoom' , 'flip' , 'bounce' , 'rotate' ,'swing']
 
 const SectionThree = () => {
@@ -10,13 +10,12 @@ const SectionThree = () => {
     const animateRef = useRef(null)
     const isSectionInView= useInView(animateRef,{amount:0.2})
     let codeString = `import {AnimatedGroup} from 'pratap-ui'
-<AnimatedGroup key={play} className='flex gap-5 justify-center'
+<AnimatedGroup key={play} className='grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-4'
 effect='${variant[activeVariant]}'>
-
-<div className=' w-32 h-40 bg-slate-400 rounded'></div>
-<div className=' w-32 h-40 bg-slate-400 rounded'></div>
-<div className=' w-32 h-40 bg-slate-400 rounded'></div>
-<div className=' w-32 h-40 bg-slate-400 rounded'></div>
+ <img src='//image link' className='object-cover w-full aspect-[4/5] rounded'></img>
+ <img src='//image link' className='object-cover w-full aspect-[4/5] rounded'></img>
+ <img src='//image link' className='object-cover w-full aspect-[4/5] rounded'></img>
+ <img src='//image link' className='object-cover w-full aspect-[4/5] rounded'></img>
 </AnimatedGroup>`
 
 
@@ -40,28 +39,28 @@ effect='${variant[activeVariant]}'>
     },[isSectionInView])
 
  return (
-      <div ref={animateRef} className='sectionthree px-[4%] md:px-[10%] mt-16 relative '>
+      <div ref={animateRef} className='sectionthree max-w-7xl mx-auto mt-16 relative px-6'>
           
           <h2 className='text-3xl sm:text-4xl md:text-5xl font-[600] z-10 relative'>
         Build&nbsp;
-        <motion.div className='text-3xl sm:text-4xl md:text-5xl font-[700] italic leading-[1.25] p-1  bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent inline-block '
+        <motion.div className='text-3xl sm:text-4xl md:text-5xl font-[1000] italic py-1  pr-1  bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent inline-block '
          animate={{y:[-5,0,5],transition:{ repeat: Infinity, repeatType: "reverse", duration:1.2,ease:'linear'}}}  >
-          stunning </motion.div>  <br />
+          Amazing </motion.div>  <br />
           Components in No Time!
          </h2>
          <p className='sm:text-xl text-zinc-500 max-w-[600px] mt-2'>Create interactive, animated components in just a few lines—powerful features, dynamic functionality, all with minimal code!</p>
           
 
-          <div className='flex justify-evenly items-center gap-2 flex-col mt-10 lg:flex-row z-10 relative'>
+          <div className='flex justify-between items-center gap-8 flex-col mt-10 lg:flex-row z-10 relative'>
           
-              <AnimatedGroup key={play} className='flex gap-2 md:gap-5 justify-center' effect={variant[activeVariant]}>
-               <img src='https://images.pexels.com/photos/24014245/pexels-photo-24014245/free-photo-of-photo-of-a-small-domestic-dog-lying-on-the-floor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover w-32 h-40 bg-slate-400 rounded'></img>
-               <img src='https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover w-32 h-40 bg-slate-400 rounded'></img>
-               <img src='https://images.pexels.com/photos/24014245/pexels-photo-24014245/free-photo-of-photo-of-a-small-domestic-dog-lying-on-the-floor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover  w-32 h-40 bg-slate-400 rounded'></img>
-               <img src='https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover w-32 h-40 bg-slate-400 rounded'></img>
+              <AnimatedGroup key={play} className='grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-4 max-w-[650px] w-full' effect={variant[activeVariant]}>
+               <img src='https://nextui.org/_next/image?url=%2Fimages%2Fhero-card.webp&w=256&q=75' className='object-cover w-full aspect-[4/5] bg-slate-400 rounded'></img>
+               <img src='https://abhishekjha.me/card1.a0552dbc.png' className='object-cover w-full aspect-[4/5] bg-slate-400 rounded'></img>
+               <img src='https://images.pexels.com/photos/2766408/pexels-photo-2766408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover w-full aspect-[4/5] bg-slate-400 rounded'></img>
+               <img src='https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='object-cover w-full aspect-[4/5] bg-slate-400 rounded'></img>
               </AnimatedGroup>
           
-              <Code className='min-h-[300px] max-w-[500px] w-full' codeString={codeString}></Code>
+              <Code className='min-h-[300px] max-w-[550px] w-full' codeString={codeString}></Code>
               </div>
       </div>
   )

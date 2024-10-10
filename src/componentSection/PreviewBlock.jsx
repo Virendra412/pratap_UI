@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Code from '../componets/uiComponents/Code'
+import Code from '../componets/UtilsComponent/Code'
 import { GalleryThumbnails, RotateCcw, SquareDashedBottomCode } from 'lucide-react'
 
 const PreviewBlock = ({children,codeString='hii'}) => {

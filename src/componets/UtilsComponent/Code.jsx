@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { coldarkDark as theme} from "react-syntax-highlighter/dist/esm/styles/prism";
 import { twMerge } from "tailwind-merge";
 import { Check, Copy } from "lucide-react";
 
 
-const Code = ({className,codeString,fontSize='12px',wrapLines=true,...props}) => {
+const Code = ({className,codeString,fontSize='13px',wrapLines=true,...props}) => {
   const [isCopy, setIsCopy] = useState(false);
 
   function handleCopy() {
@@ -30,7 +30,7 @@ const Code = ({className,codeString,fontSize='12px',wrapLines=true,...props}) =>
         </button>
       </div>
       <SyntaxHighlighter wrapLines language="jsx" style={theme} 
-        customStyle={{ background: "transparent", fontFamily: "Verdana, Geneva, Tahoma, sans-serif", fontSize:fontSize, fontWeight: "100" }} >
+        customStyle={{ background: "transparent", fontFamily: "Verdana, Geneva, Tahoma, sans-serif", fontSize:fontSize,  }} >
         {codeString}
       </SyntaxHighlighter>
     </div>

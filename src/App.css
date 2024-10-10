@@ -10,6 +10,7 @@
 body{
 scroll-behavior: smooth;
 background-color: white;
+
 -webkit-font-smoothing: antialiased;
 
 /* background: white; */

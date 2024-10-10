@@ -5,8 +5,9 @@ import SectionTwo from "../componets/SectionTwo";
 import SectionOne from "../componets/SectionOne";
 import SectionFour from "../componets/SectionFour";
 import Features  from '../componets/Features'
-import bluf2 from '../assets/Operations_puff.webp'
-import bluf from '../assets/Conversion_puff.webp'
+
+
+
 
 
 const Home = () => {
@@ -22,6 +23,9 @@ const Home = () => {
       </div>
       <SectionFour />
       <Features></Features>
+      {/* <ScrambleText className="text-green-600 text-3xl" encyptType='alphanumeric'>UDay pratap singh chauhan</ScrambleText> */}
+     
+      
     </>
   );
 };

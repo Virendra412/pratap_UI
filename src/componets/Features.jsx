@@ -31,7 +31,7 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <div className="px-[4%] md:px-[10%] py-[8%]">
+    <div className="max-w-7xl mx-auto mt-16 relative px-6">
       <h3 className="text-center font-bold text-3xl md:text-6xl">
         Last but <br />
         not least
@@ -40,12 +40,12 @@ const Features = () => {
         Unleash Creativity with Our Comprehensive React UI Library!
       </p>
 
-      <AnimateOnView className='flex justify-center' animateOnce={false}>
-        <AnimatedGroup effect="swing" className="grid gap-5 grid-cols-2 md:grid-cols-3 grid-rows-2 mt-10 max-w-[1050px] ">
+      <AnimateOnView className='m-auto' animateOnce={false}>
+        <AnimatedGroup effect="swing" className="grid gap-5 grid-cols-2 md:grid-cols-3 grid-rows-2 mt-10 max-w-[1050px]  ">
           {
             featuresData.map((item,index) => {
               return (
-                <div key={index} className="border p-2 bg-white dark:bg-neutral-950 rounded-lg border-neutral-100 dark:border-neutral-900 h-full shadow-md dark:shadow-zinc-700/50">
+                <div key={index} className="border px-2 py-3 bg-white dark:bg-neutral-950 rounded-lg border-neutral-100 dark:border-neutral-900 h-full shadow-md dark:shadow-zinc-700/50">
                 <div className="flex items-center gap-2">
                   <span className="bg-neutral-400/30 shrink-0 w-8 aspect-square dark:bg-purple-600/10 inline-block rounded-full p-2 md:w-10"> <img className="w-full" src={ item.imageUrl} alt="" /> </span>
                     <h3 className="text-sm md:text-lg font-medium ">{ item.title}</h3>
