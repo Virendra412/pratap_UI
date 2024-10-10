@@ -1,5 +1,5 @@
 const heading = 'Scaramble Text'
-const content = "Easily animate text in React with  '<AnimatedText>'  component, offering smooth transitions, dynamic effects, and enhanced user engagement, all with minimal effort and full control over animation behavior."
+const content = "Easily animate text in React with  '<ScrambleText>'  component, offering smooth transitions, dynamic effects, and enhanced user engagement, all with minimal effort and full control over animation behavior."
 
 const propDetails = [
     {
