@@ -17,8 +17,8 @@ const Code = ({className,codeString,fontSize='13px',wrapLines=true,...props}) =>
   }
 
   return (
-    <div className={twMerge( 'mainCode bg-slate-900  rounded-lg overflow-auto  relative px-3',className)} {...props}>
-      <div className="codeHeader flex justify-between py-1 sticky top-0  left-0 ">
+    <div className={twMerge( 'mainCode bg-slate-900  rounded-lg overflow-auto  relative px-3 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]',className)} {...props}>
+      <div className="codeHeader flex justify-between py-1 sticky top-0  left-0  backdrop-blur-[2px]">
         <div className="flex gap-1  py-2">
           <span className="w-3 h-3 rounded-full bg-pink-500 inline-block"></span>
           <span className="w-3 h-3 rounded-full bg-orange-500 inline-block"></span>

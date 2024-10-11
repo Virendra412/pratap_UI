@@ -29,7 +29,7 @@ const PreviewBlock = ({children,codeString='hii'}) => {
           </div>
         </div>}
       {!isPreviewActive && <Code className='min-h-[300px] bg-slate-800 dark:bg-slate-900 max-h-[500px]
-      bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]
+     
       ' codeString={codeString}></Code>}
     </div>
   )
