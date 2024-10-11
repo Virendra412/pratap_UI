@@ -11,7 +11,7 @@ const SectionFour = () => {
             Scroll Effect</div>  <br />
       </h2>
     </div>
-    <ScrollShow>
+    <ScrollShow >
     <TopLayer className='bg-[#E7EEF2]'>
                   <div className='w-full h-full relative flex items-end '>
                       <div className="textContent w-fit ml-[2%] mb-[2%] max-w-[90%] sm:max-w-[400px] z-10 bg-neutral-100/50 p-3 rounded-lg backdrop-blur-lg">
