@@ -14,14 +14,14 @@ const Navbar = () => {
 
   return (
       <nav className='flex h-[60px] border-b border-zinc-200 dark:border-zinc-900'>
-      <div className='max-w-[1350px] px-6 mx-auto flex justify-between items-center w-full'>
+      <div className='max-w-[1350px] px-2 sm:px-6 mx-auto flex justify-between items-center w-full'>
       <Link to='/'>
        <div className='text-base md:text-lg flex font-semibold items-center'>
         <img src={logo} className='w-4 sm:w-5 md:w-6 h-fit object-cover aspect-square mr-1' alt="" />
         Pratap UI</div></Link>
           <div className='flex gap-2 items-center sm:gap-4 md:gap-7 font-medium '>
               <Link className='text-xs sm:text-sm font-semibold' to='/components/'>Components</Link>
-              <Link className='text-xs sm:text-sm font-semibold' to='/components'>Twitter</Link>
+              <Link className='text-xs sm:text-sm font-semibold' to='/installation'>Installation</Link>
               
         <span className='text-sm sm:text-1xl' href="" onClick={modeHandler}>{isDark ? <Moon size={16} strokeWidth={2} /> : <SunDim size={16}  strokeWidth={2}/> }</span>
           </div>

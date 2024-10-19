@@ -1,5 +1,5 @@
-const heading = 'Infinite Slider'
-const content = "Unleash the power of smooth, continuous scrolling with EndlessScroll, the ultimate slider component designed for seamless, looped transitions. Whether horizontal or vertical, this dynamic display keeps your content flowing effortlessly with customizable speed. Perfect for carousels, marquee effects, or any showcase that demands attention."
+const heading = 'Animated Group'
+const content = "Elevate your UI by adding smooth, staggered animations to any collection of elements—be it lists, grids, or groups of components. With AnimatedGroup, each child element flows into view with customizable timing and stunning transitions, bringing your interfaces to life effortlessly."
 const propDetails = [
     {
       prop: 'Prop',

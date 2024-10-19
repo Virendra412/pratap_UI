@@ -6,14 +6,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        'warm-white': '#f6f2ef',
-        'custom-textColor': '#2d312a',
-        
-
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }

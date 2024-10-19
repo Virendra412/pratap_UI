@@ -15,7 +15,7 @@ const Example1 = () => {
   const text = "Animate your ideas with Pratap UI";
   return (
     <div className="max-w-[800px] m-auto p-4 h-[200px] flex items-center">
-        <ScrambleText className="text-green-600 font-mono uppercase font-semibold text-sm md:text-3xl" encyptType="alphanumeric">{text}</ScrambleText>
+        <ScrambleText className="text-green-600 font-mono uppercase font-medium text-sm md:text-3xl" encyptType="alphanumeric">{text}</ScrambleText>
     </div>
   );
 };
