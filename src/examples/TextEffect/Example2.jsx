@@ -8,6 +8,7 @@ const Example2 = () => {
     </AnimatedText>
   );
 };`
+const title= "Text Effect ( variant='wave')"
 
 const Example2 = () => {
   const text = `Pratap UI is a comprehensive React UI library designed to empower developers with a collection of clean, responsive, and accessible components for building modern web applications. From buttons and input fields to complex modal dialogs and data tables, the library provides a wide range of UI elements that are easy to integrate and customize.`;
@@ -23,4 +24,4 @@ const Example2 = () => {
 };
 
 export default Example2;
-export{codeString}
+export{codeString,title}

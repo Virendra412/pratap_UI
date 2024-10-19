@@ -3,9 +3,10 @@ import PreviewBlock from './PreviewBlock.jsx';
 import CompnentSlider from './CompnentSlider.jsx';
 import PropDetails from './PropDetails.jsx';
 import { Menu, X } from 'lucide-react';
-// import Hover from '../componets/uiComponents/Hover.jsx';
+import { useLocation } from 'react-router-dom';
+import componentData from '../assets/componentData.js'
 const componentNames = ['Example1', 'Example2', 'Example3', 'Example4', 'Example5', 'Example6']; // List all component names
-const componentData = [ { title: 'InfiniteSlider', length: 1 },{ title: 'TextEffect', length: 2 },{ title: 'TypeWriter', length: 1 },{title:'AnimateOnView',length:0},{title:'Animated Counter',length:1},{title:'Scramble Text',length:1}]
+
 const codeString=`const Example1 = () => {
   return (
       <div className='max-w-[800px] m-auto'>
@@ -20,6 +21,7 @@ const ComponentRenderer = () => {
   const [importedComponent, setImportedComponent] = useState([]);
   const [desc, setDesc] = useState(null)
 
+
   
 useEffect(() => {
   const importComponent = async () => {
@@ -29,7 +31,7 @@ useEffect(() => {
       
         for (let i = 0; i < componentData[activeIndex].length; i++){
         const module = await import(`../examples/${componentData[activeIndex].title}/${componentNames[i]}.jsx`);
-        comps.push({comp:<module.default/>,codeString:module.codeString})
+        comps.push({comp:<module.default/>,codeString:module.codeString,title:module.title})
       }
       setImportedComponent(comps)
   };
@@ -42,8 +44,8 @@ useEffect(() => {
     setActiveIndex(index)
   }
     
-  return (<div>
-    <div className={`border-b border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`} onClick={()=>setIsOpen(prev=>!prev)}>
+  return (<div className=' min-h-[70vh] mt-3'>
+    <div className={`border-b  border-zinc-200 dark:border-zinc-800 z-50 sticky bg-white dark:bg-black top-[-1px] sm:hidden`} onClick={()=>setIsOpen(prev=>!prev)}>
       <div className='menu px-2 items-center h-[50px] flex gap-3  '>
         {!isOpen?<Menu />:<X />}
       <span>{ componentData[activeIndex].title}</span>
@@ -56,9 +58,9 @@ useEffect(() => {
         {desc&&<h3 className='font-semibold mb-1'>{desc.heading }</h3>}
         {desc&&<h3 className='mb-5 text-zinc-500' style={{wordSpacing:'1.5px'}}>{desc.content }</h3>}
         {importedComponent.length > 0 && importedComponent.map((item, ind) => {
-          return (<React.Fragment key ={ind}>
-            <h3 className='mb-1 mt-5'>Example {ind + 1}</h3>
-            <PreviewBlock codeString={item.codeString}> {item.comp} </PreviewBlock> </React.Fragment>)
+          return (<div className='mb-20' key ={ind}>
+            <h3 className='mb-1 mt-5'>{item.title }</h3>
+            <PreviewBlock codeString={item.codeString}> {item.comp} </PreviewBlock> </div>)
         })}
         {desc &&<PropDetails propDetails={desc.propDetails}></PropDetails>}
        </div>

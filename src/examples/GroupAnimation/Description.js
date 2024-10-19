@@ -1,9 +1,8 @@
-const heading = 'Animated Group'
-const content = "A wrapper that adds animated transitions to a group of child elements. It's perfect for creating staggered animations for lists, grids, or any collection of components."
-
+const heading = 'Infinite Slider'
+const content = "Unleash the power of smooth, continuous scrolling with EndlessScroll, the ultimate slider component designed for seamless, looped transitions. Whether horizontal or vertical, this dynamic display keeps your content flowing effortlessly with customizable speed. Perfect for carousels, marquee effects, or any showcase that demands attention."
 const propDetails = [
     {
-        prop: 'Prop',
+      prop: 'Prop',
       type: 'Type',
       default: "Default",
       description: 'Description',
@@ -18,18 +17,20 @@ const propDetails = [
       prop: 'className',
       type: 'string',
       default: 'undefined',
-      description: 'Optional CSS class for styling the component.',
+      description: 'Optional CSS class for styling the wrapper of children.',
     },
     {
-      prop: 'variants',
-      type: '{ container?: Variants; item?: Variants; }',
-      default: 'undefined',
-      description: 'Custom variants for container and item animations.',
+      prop: 'effect',
+      type: " 'fade' | 'slide' | 'scale' | 'blur' | 'blur-slide' | 'zoom' | 'flip' | 'bounce' | 'rotate' | 'swing''",
+      default: "'horizontal'",
+      description: 'Alignment of slider',
     },
     {
-      prop: 'preset',
-      type: "'fade' | 'slide' | 'scale' | 'blur' | 'blur-slide'",
-      default: 'undefined',
-      description: 'Preset animations to apply to the group of elements.',
+      prop: 'style',
+      type: 'CSS properties',
+      default: '',
+      description: 'Optional CSS for styling the wrapper of children.',
     }
-  ];
+];
+  
+export { heading, content, propDetails }

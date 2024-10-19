@@ -8,6 +8,7 @@ const codeString = `const Example1 = () => {
     </div>
   );
 };`;
+const title= 'AnimatedCounter'
 
 const Example1 = () => {
   return (
@@ -19,4 +20,4 @@ const Example1 = () => {
 };
 
 export default Example1;
-export { codeString };
+export { codeString,title };
