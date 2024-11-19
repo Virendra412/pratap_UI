@@ -58,7 +58,7 @@ useEffect(() => {
         {desc&&<h3 className='font-semibold mb-1'>{desc.heading }</h3>}
         {desc&&<h3 className='mb-5 text-zinc-500' style={{wordSpacing:'1.5px'}}>{desc.content }</h3>}
         {importedComponent.length > 0 && importedComponent.map((item, ind) => {
-          return (<div className='mb-20' key ={ind}>
+          return (<div className='mb-20' key ={item.title}>
             <h3 className='mb-1 mt-5'>{item.title }</h3>
             <PreviewBlock codeString={item.codeString}> {item.comp} </PreviewBlock> </div>)
         })}

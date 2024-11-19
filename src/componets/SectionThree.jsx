@@ -8,7 +8,7 @@ const SectionThree = () => {
     const [activeVariant, setActiveVariant] = useState(0)
     const [play, setPlay] = useState(false)
     const animateRef = useRef(null)
-    const isSectionInView= useInView(animateRef,{amount:0.2})
+    const isSectionInView= useInView(animateRef)
     let codeString = `import {AnimatedGroup} from 'pratap-ui'
 <AnimatedGroup key={play} className='grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-4'
 effect='${variant[activeVariant]}'>
@@ -32,7 +32,7 @@ effect='${variant[activeVariant]}'>
                         })
                         setPlay(prev=>!prev)
                }
-            }, 2000)
+            }, 1000)
        
         
         return () => { clearInterval(interval) }
