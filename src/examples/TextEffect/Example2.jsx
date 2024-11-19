@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatedText } from "pratap-ui";
-const codeString = `
+const codeString =`import { AnimatedText} from "pratap-ui"
 const Example2 = () => {
   return (
     <AnimatedText variant="wave" wrapperClass="m-auto">

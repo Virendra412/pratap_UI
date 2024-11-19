@@ -1,6 +1,7 @@
 import React from "react";
 import {AnimatedGroup, TypeWriter} from "pratap-ui";
-const codeString = `const Example1 = () => {
+const codeString = `import {AnimatedGroup} from "pratap-ui"
+const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto">
            <AnimatedGroup className='grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-4 max-w-[650px] w-full' effect='bounce'>

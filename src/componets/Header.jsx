@@ -9,8 +9,8 @@ import {
   motion,
   useSpring,
 } from "framer-motion";
-import { maskGenerator } from "../../test";
-import { Github } from "lucide-react";
+
+
 
 const Header = () => {
 

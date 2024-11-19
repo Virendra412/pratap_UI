@@ -10,6 +10,7 @@ const Footer = () => {
       </div>
       <div>
       <ul className='text-xs md:text-base'>
+        <a href="mailto:uday06122000@gmail.com"><li>Contact Us</li></a>
         <li>Twitter</li>
         <li>Github</li>
         <li>Instagram</li>

@@ -20,7 +20,7 @@ const SectionFour = () => {
                           The Taj Mahal is a dazzling white marble masterpiece in Agra, India, celebrated for its intricate artistry, lush gardens, and romantic allure—a timeless tribute to love and beauty.
                           </p>
                       </div>    
-                <img className='absolute w-full h-full object-cover object-center right-0' src="https://images.pexels.com/photos/28257148/pexels-photo-28257148/free-photo-of-double-taj.jpeg" alt="" />
+                <img className='absolute w-full h-full object-cover object-center right-0' src="https://res.cloudinary.com/dhoha33eh/image/upload/v1732008867/free-photo-of-double-taj_yaaeuy.jpg" alt="taj Mahal" />
                   </div>
 
               </TopLayer>
@@ -32,11 +32,11 @@ const SectionFour = () => {
                           The enchanting "Palace of Winds" in Jaipur, dazzles with its stunning pink facade and intricate latticework. This architectural gem offers a glimpse into royal life and vibrant culture.
                           </p>
                       </div>    
-                <img className='absolute w-full h-full object-cover object-center right-0' src="https://images.pexels.com/photos/14940427/pexels-photo-14940427.jpeg" alt="" />
+                <img className='absolute w-full h-full object-cover object-center right-0' src="https://res.cloudinary.com/dhoha33eh/image/upload/v1732008868/hawa_jkv6vn.jpg" alt="hawa Magal" />
                   </div>
                   
                   
-                 {/* https://images.pexels.com/photos/17762635/pexels-photo-17762635/free-photo-of-jal-mahal-palace.jpeg*/}
+                
                 
               </MiddleLayer>
               <BottomLayer className='bg-green-200 flex justify-center'>
@@ -47,7 +47,7 @@ const SectionFour = () => {
                           Jal Mahal, the mesmerizing "Water Palace" in Jaipur, enchants with its stunning blend of Rajput and Mughal design, gracefully floating on Man Sagar Lake—an idyllic gem of serenity and beauty!
                           </p>
                       </div>    
-                <img className='absolute w-full h-full object-cover object-center right-0' src="https://images.pexels.com/photos/13427001/pexels-photo-13427001.jpeg" alt="" />
+                <img className='absolute w-full h-full object-cover object-center right-0' src="https://res.cloudinary.com/dhoha33eh/image/upload/v1732008868/jal_mumaxh.jpg" alt="jal Mahal" />
                   </div>
               </BottomLayer>
     </ScrollShow>

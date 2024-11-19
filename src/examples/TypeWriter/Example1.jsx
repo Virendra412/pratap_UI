@@ -1,6 +1,7 @@
 import React from "react";
 import {TypeWriter} from "pratap-ui";
-const codeString = `const Example1 = () => {
+const codeString = `import {TypeWriter} from "pratap-ui"
+const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto p-4">
       <TypeWriter

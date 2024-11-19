@@ -1,7 +1,8 @@
 import React from "react";
 import { ScrambleText } from "pratap-ui";
 
-const codeString = `const Example1 = () => {
+const codeString = `import { ScrambleText } from "pratap-ui"
+const Example1 = () => {
   const text = "Animate your ideas with Pratap UI";
   return (
     <div className="max-w-[800px] m-auto p-4 h-[200px] flex items-center">

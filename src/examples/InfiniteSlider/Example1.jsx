@@ -1,6 +1,7 @@
 import React from "react";
 import { InfiniteSlider } from "pratap-ui";
-const codeString = `const Example1 = () => {
+const codeString = `import { InfiniteSlider } from "pratap-ui";
+const Example1 = () => {
   return (
     <div
       className="m-auto flex gap-10 h-[500px]"

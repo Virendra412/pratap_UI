@@ -1,6 +1,7 @@
 import React from "react";
-import { AnimatedCounter, AnimateOnView } from "pratap-ui";
-const codeString = `const Example1 = () => {
+import { AnimatedCounter} from "pratap-ui";
+const codeString = `import { AnimatedCounter} from "pratap-ui"
+const Example1 = () => {
   return (
     <div className="max-w-[800px] m-auto ">
       <AnimatedCounter className="text-2xl md:text-5xl font-medium text-[#30C0B7]" style={{fontFamily:'"Roboto Mono", monospace'}} from={0.1} to={1.3} toFixedDecimal={1} suffix="Millon+" />
