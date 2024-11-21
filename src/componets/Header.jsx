@@ -54,7 +54,7 @@ const Header = () => {
               <path d="m9 18 6-6-6-6"></path>
             </svg>
           </Link>
-          <Link to={'https://github.com/udaypratap1112'} className=" py-2 bg-black text-xs sm:text-sm px-2 sm:px-5 text-white dark:bg-white dark:text-black  rounded-md  md:py-2 flex items-center ">
+          <Link to={'https://github.com/Virendra412'} className=" py-2 bg-black text-xs sm:text-sm px-2 sm:px-5 text-white dark:bg-white dark:text-black  rounded-md  md:py-2 flex items-center ">
             <svg
               role="img"
               viewBox="0 0 24 24"
