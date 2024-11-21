@@ -12,7 +12,8 @@ const Footer = () => {
       <ul className='text-xs md:text-base'>
         <a href="mailto:uday06122000@gmail.com"><li>Contact</li></a>
         <a href="https://github.com/Virendra412"><li>Github</li></a>
-        <li>Twitter</li>
+        <a href="https://github.com/Virendra412"><li>Twitter</li></a>
+       
         <li>Instagram</li>
       </ul>
       </div>
