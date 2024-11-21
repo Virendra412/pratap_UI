@@ -13,8 +13,9 @@ const Footer = () => {
         <a href="mailto:uday06122000@gmail.com"><li>Contact</li></a>
         <a href="https://github.com/Virendra412"><li>Github</li></a>
         <a href="https://github.com/Virendra412"><li>Twitter</li></a>
+        <a href="https://github.com/Virendra412"><li>Instagram</li></a>
        
-        <li>Instagram</li>
+        
       </ul>
       </div>
       
